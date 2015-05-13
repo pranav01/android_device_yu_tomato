@@ -1,4 +1,4 @@
-# Copyright (C) 2014 The CyanogenMod Project
+# Copyright (C) 2015 NamelessRom
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,10 +14,10 @@
 
 $(call inherit-product, device/yu/tomato/full_tomato.mk)
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit from our custom product configuration
+$(call inherit-product, vendor/nameless/config/common.mk)
 
-PRODUCT_NAME := cm_tomato
+PRODUCT_NAME := nameless_tomato
 BOARD_VENDOR := yu
 PRODUCT_DEVICE := tomato
 

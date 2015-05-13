@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
--include device/cyanogen/msm8939-common/BoardConfigCommon.mk
+-include device/yu/msm8939-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/yu/tomato
 
@@ -23,7 +23,7 @@ TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 TARGET_BOARD_INFO_FILE ?= device/yu/tomato/board-info.txt
 
 # Kernel
-TARGET_KERNEL_CONFIG := cyanogenmod_tomato-64_defconfig
+TARGET_KERNEL_CONFIG := custom_tomato-64_defconfig
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
