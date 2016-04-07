@@ -66,7 +66,6 @@ PRODUCT_PACKAGES += \
 
 # Charger
 ADDITIONAL_DEFAULT_PROPERTIES += \
-    ro.usb.id.charge=F006 \
     ro.usb.id.mtp=F003 \
     ro.usb.id.mtp_adb=9039 \
     ro.usb.id.ptp=904D \
@@ -97,8 +96,15 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
     $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
+
+# Radio
+ifeq ($(QCPATH),)
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/data/netmgr_config.xml:system/etc/data/netmgr_config.xml \
+    $(LOCAL_PATH)/configs/data/qmi_config.xml:system/etc/data/qmi_config.xml \
+    $(LOCAL_PATH)/configs/data/dsi_config.xml:system/etc/data/dsi_config.xml
+endif
 
 # Ramdisk
 PRODUCT_PACKAGES += \

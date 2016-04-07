@@ -23,7 +23,7 @@ TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 TARGET_BOARD_INFO_FILE ?= $(DEVICE_PATH)/board-info.txt
 
 # Kernel
-TARGET_KERNEL_CONFIG := custom_tomato-64_defconfig
+TARGET_KERNEL_CONFIG := cyanogenmod_tomato-64_defconfig
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
@@ -58,8 +58,8 @@ endif
 endif
 
 # GPS
-TARGET_GPS_HAL_PATH := $(DEVICE_PATH)/gps
 TARGET_NO_RPC := true
+USE_DEVICE_SPECIFIC_GPS := true
 
 # init
 TARGET_LIBINIT_DEFINES_FILE := $(DEVICE_PATH)/init/init_tomato.cpp

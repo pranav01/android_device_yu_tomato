@@ -1,8 +1,0 @@
-[
-    {
-        "remote": "github",
-        "repository": "NamelessRom/android_device_yu_msm8939-common",
-        "target_path": "device/yu/msm8939-common",
-        "revision": "n-2.1"
-    }
-]
